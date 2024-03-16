@@ -1,0 +1,12 @@
+[Unit]
+Description=Front Camera Recorder Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/alex/cameras/front-camera.sh
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
